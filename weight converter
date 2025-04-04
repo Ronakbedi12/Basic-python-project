@@ -1,0 +1,8 @@
+weight_L=int(input("Enter your weight: "))
+unit=input('(L)bs or (kg):')
+if unit.upper()=="L":
+    converted=round(0.453592*weight_L)
+    print(f"You are {converted} kilos")
+else:
+    converted= round(weight_L//0.453592)
+    print(f"you are{converted} pounds")
