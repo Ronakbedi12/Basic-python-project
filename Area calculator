@@ -1,29 +1,50 @@
 print("****** AREA CALCULATOR ******")
-print("""Press 1 to get the area of a square: 
-Press 2 to get the area of a rectangle: 
-Press 3 to get a area of a circle:
-Press 4 to get a area of triangle:""")
+while True:
 
-choice = int(input("Enter a number between 1-4: "))
+    print("""Press 1 to get the area of a square:
+    Press 2 to get the area of a rectangle:
+    Press 3 to get a area of a circle:
+    Press 4 to get a area of triangle:""")
 
-if choice==1:
-    side=float(input("Enter the length of one side: "))
-    area=side**2
-    print("Area of a square is: ",area)
-elif choice==2:
-    length=float("Enter a length of the rectangle: ")
-    width=float(input("Enter the width of a rectangle: "))
-    area=length*width
-    print("Area of a rectangle is: ",area)
-elif choice==3:
-    radius=float(input("Enter the radius of the circle: "))
-    area=((22/7)*(radius**2))
-    print("Area of a Circle is: ",area)
-elif choice==4:
-    base=float(input("Enter the base of the triangle: "))
-    height=float(input("Enter the height of the triangle: "))
-    area=(0.5*base*height)
-    print("Area of a triangle is: ",area)
+    choice = int(input("Enter a number between 1-4: "))
 
-else:
-    print("Invalid input")
+    if choice==1:
+        while True:
+            side=float(input("Enter the length of one side: "))
+            area=side**2
+            print("Area of a square is: ",area)
+            repeat=str(input("do you want to try again with square?"))
+            if repeat == "no":
+                break
+    elif choice==2:
+        while True:
+            length=float(input("Enter a length of the rectangle: "))
+            width=float(input("Enter the width of a rectangle: "))
+            area=length*width
+            print("Area of a rectangle is: ",area)
+            repeat = input("do you want to try again with rectangle?")
+            if repeat == "no":
+                break
+    elif choice==3:
+        while True:
+            radius=float(input("Enter the radius of the circle: "))
+            area=((22/7)*(radius**2))
+            print("Area of a Circle is: ",area)
+            repeat = input("do you want to try again with circle?")
+            if repeat == "no":
+                break
+    elif choice==4:
+        while True:
+            base=float(input("Enter the base of the triangle: "))
+            height=float(input("Enter the height of the triangle: "))
+            area=(0.5*base*height)
+            print("Area of a triangle is: ",area)
+            repeat = input("do you want to try again with triangle?")
+            if repeat == "no":
+                break
+    else:
+        print("Invalid input")
+
+    repeat1=input("Do you want to repeat the menu again: ")
+    if repeat1=="no":
+        break
